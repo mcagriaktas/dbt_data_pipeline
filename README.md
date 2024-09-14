@@ -1,4 +1,4 @@
-# dbt_data_piplene
+# dbt_data_pipeline
 The project covers the dbt tutorial, and I also set up Trino and Postgres
 
 Task link = https://github.com/dbt-labs/jaffle_shop-dev
