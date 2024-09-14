@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  trino:
+    container_name: trino
+    hostname: trino
+    image: 'trinodb/trino:latest'
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog:ro
+    networks:
+      dahbest:
+        ipv4_address: 172.80.0.80
+    environment:
+      - TRINO_MEMORY_HEAP_HEADROOM_PER_NODE=2048MB
+    restart: always
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: cagri
+      POSTGRES_PASSWORD: 3541
+      POSTGRES_DB: jaffle_shop_db
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgre/postgresql_data:/var/lib/postgresql/data
+      - ./postgre/query_init:/docker-entrypoint-initdb.d
+    restart: always
+    networks:
+      dahbest:
+        ipv4_address: 172.80.0.10
+
+networks:
+  dahbest:
+    external: true
+
+volumes:
+  postgresql_data:
+
