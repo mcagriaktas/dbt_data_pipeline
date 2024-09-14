@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-configmap-init
+data:
+  create_schema.sql: |
+    -- Contents of your create_schema.sql file
+    CREATE SCHEMA IF NOT EXISTS jaffle_shop_sc;
+

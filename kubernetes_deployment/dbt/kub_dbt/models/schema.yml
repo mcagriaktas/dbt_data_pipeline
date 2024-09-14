@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: payment_order_summary
+    description: "This table summarizes the count of payment methods by order status."
+    columns:
+      - name: payment_method
+        description: "The payment method used for the order."
+        tests:
+          - not_null
+      - name: status
+        description: "The status of the order (e.g., completed, pending, canceled)."
+        tests:
+          - not_null
+      - name: count_type
+        description: "The count of orders by payment method and status."
+        tests:
+          - not_null

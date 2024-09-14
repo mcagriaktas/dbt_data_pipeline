@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  labels:
+    io.kompose.service: trino
+  name: trino
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: trino
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml
+        kompose.version: 1.26.1 (a9d05d509)
+      labels:
+        io.kompose.network/dahbest: "true"
+        io.kompose.service: trino
+    spec:
+      containers:
+        - env:
+            - name: TRINO_MEMORY_HEAP_HEADROOM_PER_NODE
+              value: 2048MB
+          image: trinodb/trino:latest
+          name: trino
+          ports:
+            - containerPort: 8080
+          resources: {}
+          volumeMounts:
+            - name: trino-catalog-volume
+              mountPath: /etc/trino/catalog/jaffle_shop_db.properties
+              subPath: jaffle_shop_db.properties
+      volumes:
+        - name: trino-catalog-volume
+          configMap:
+            name: trino-catalog-config  
+

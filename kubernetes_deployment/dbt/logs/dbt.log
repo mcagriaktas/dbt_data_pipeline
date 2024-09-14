@@ -1,0 +1,49 @@
+[0m19:34:00.011492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754ef49c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754d50bac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754d50bb20>]}
+
+
+============================== 19:34:00.014325 | 9471427d-9000-4bca-9ff5-0ff284893286 ==============================
+[0m19:34:00.014325 [info ] [MainThread]: Running with dbt=1.8.6
+[0m19:34:00.014707 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/cagri/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init kub_dbt', 'send_anonymous_usage_stats': 'True'}
+[0m19:34:00.031776 [debug] [MainThread]: Starter project path: /home/cagri/python_env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m19:34:00.039198 [info ] [MainThread]: 
+Your new dbt project "kub_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:34:00.039620 [info ] [MainThread]: Setting up your profile.
+[0m19:34:32.511260 [info ] [MainThread]: Profile kub_dbt written to /home/cagri/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:34:32.514025 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 32.53338, "process_user_time": 0.775886, "process_kernel_time": 0.118665, "process_mem_max_rss": "89624", "process_in_blocks": "64288", "process_out_blocks": "72"}
+[0m19:34:32.514618 [debug] [MainThread]: Command `dbt init` succeeded at 19:34:32.514543 after 32.53 seconds
+[0m19:34:32.514945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754ef49c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754d414bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f754d5083d0>]}
+[0m19:34:32.515269 [debug] [MainThread]: Flushing usage events
+[0m19:34:40.752642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacdaa5c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacc067b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacc067bb0>]}
+
+
+============================== 19:34:40.754584 | f646e65e-c28b-47c0-9a52-69ad4115ec66 ==============================
+[0m19:34:40.754584 [info ] [MainThread]: Running with dbt=1.8.6
+[0m19:34:40.754938 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/cagri/.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m19:34:40.762763 [info ] [MainThread]: dbt version: 1.8.6
+[0m19:34:40.763354 [info ] [MainThread]: python version: 3.10.12
+[0m19:34:40.763572 [info ] [MainThread]: python path: /home/cagri/python_env/bin/python3
+[0m19:34:40.763806 [info ] [MainThread]: os info: Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+[0m19:34:40.801804 [info ] [MainThread]: Using profiles dir at /home/cagri/.dbt
+[0m19:34:40.802464 [info ] [MainThread]: Using profiles.yml file at /home/cagri/.dbt/profiles.yml
+[0m19:34:40.802704 [info ] [MainThread]: Using dbt_project.yml file at /home/cagri/kubepods/dbt_trino_postgresql/project_yaml/dbt/dbt_project.yml
+[0m19:34:40.803035 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m19:34:40.803959 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.080671765, "process_user_time": 0.637848, "process_kernel_time": 0.069764, "process_mem_max_rss": "90324", "process_in_blocks": "40", "process_out_blocks": "16", "command_success": false}
+[0m19:34:40.804871 [debug] [MainThread]: Command `dbt debug` failed at 19:34:40.804757 after 0.08 seconds
+[0m19:34:40.805246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacdaa5c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacdd7f6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcacdd7f280>]}
+[0m19:34:40.805583 [debug] [MainThread]: Flushing usage events
