@@ -27,8 +27,9 @@ Step 4: Write tests in your schema.yml file to ensure data quality.
 
 Step 5: Generate and serve the documentation.
 
-`$ dbt dbt docs generate
-$ dbt docs serve --port 8081`
+`$ dbt dbt docs generate`
+
+`$ dbt docs serve --port 8081`
 
 ![image](https://github.com/user-attachments/assets/1fb14531-f797-4e19-864d-3826e70e6d36)
 
