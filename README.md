@@ -1,5 +1,9 @@
 # dbt_data_pipeline
-The project covers the dbt tutorial, and I also set up Trino and Postgres
+The project covers the dbt tutorial, and I also set up Trino and Postgres. Also you can check kubernetes_deployment version.
+
+![image](https://github.com/user-attachments/assets/6a6f363c-e208-441c-8dfb-e43fbecafcbd)
+
+`TASK`
 
 Task link = https://github.com/dbt-labs/jaffle_shop-dev
 
