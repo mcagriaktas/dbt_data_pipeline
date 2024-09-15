@@ -1,4 +1,5 @@
-*.sql linguist-vendored
-*.html linguist-vendored
-*.yml linguist-vendored
-dbt_data_piplene/* linguist-vendored
+kubernetes_deployment/* linguist-vendored
+trino/catalog/* linguist-vendored
+postgre/* linguist-vendored
+*.yaml linguist-vendored
+*.md linguist-documentation
