@@ -1,5 +1,0 @@
-kubernetes_deployment/* linguist-vendored
-trino/catalog/* linguist-vendored
-postgre/* linguist-vendored
-*.yaml linguist-vendored
-*.md linguist-documentation
