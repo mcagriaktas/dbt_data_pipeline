@@ -1,1 +1,4 @@
-*.html linguist-language=ignore
+*.sql linguist-vendored
+*.html linguist-vendored
+*.yml linguist-vendored
+dbt_data_piplene/* linguist-vendored
